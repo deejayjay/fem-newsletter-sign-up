@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
 .wrapper {
-  padding: 4rem 2.4rem;
+  padding: 14.9rem 2.4rem 4rem;
   height: 100%;
   background-color: var(--color-white);
 }
