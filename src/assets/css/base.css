@@ -8,6 +8,7 @@
 
 * {
   margin: 0;
+  padding: 0;
   font: inherit;
 }
 
@@ -49,14 +50,15 @@ h6 {
 
 ul,
 ol {
-  padding: 0;
+  list-style-type: none;
 }
 
 /* End of CSS Reset */
 
 :root {
   --color-primary: hsl(4, 100%, 67%);
-  --color-dark-slate-grey: hsl(234, 29%, 20%);
+  --color-dark-navy: hsl(234, 29%, 20%);
+  --color-dark-navy-50: hsla(234, 29%, 20%, 0.5);
   --color-charcoal-grey: hsl(235, 18%, 26%);
   --color-grey: hsl(231, 7%, 60%);
   --color-white: hsl(0, 0%, 100%);
@@ -64,4 +66,8 @@ ol {
 
 html {
   font-size: 10px;
+}
+
+#app {
+  height: 100%;
 }

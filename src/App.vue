@@ -3,38 +3,39 @@
 </script>
 
 <template>
-  <!-- Sign-up form start -->
-
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com.
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
+  <div class="container">
+    <main class="main">
+      <!-- <SignUpForm /> -->
+      <Confirmation />
+    </main>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/deejayjay">DeeJayJay</a>.
+    </footer>
+  </div>
 </template>
 
-<style scoped></style>
+<script>
+import SignUpForm from './components/SignUpForm.vue';
+import Confirmation from './components/Confirmation.vue';
+
+export default {
+  name: 'App',
+  components: {
+    SignUpForm,
+    Confirmation
+  }
+}
+</script>
+
+<style scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main {
+  flex: 1;
+}
+</style>
