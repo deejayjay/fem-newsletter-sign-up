@@ -26,6 +26,8 @@ export default {
     }
   },
   methods: {
+    // Emit dismiss event when user clicks on the button so that 
+    // the SignUpForm component can be displayed again
     handleDismissClick() {
       this.$emit('dismiss');
     }

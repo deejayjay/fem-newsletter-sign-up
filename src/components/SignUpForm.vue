@@ -39,6 +39,8 @@ export default {
     };
   },
   methods: {
+    // When the form is submitted, check if the email is valid.
+    // If form is valid, emit the submit event and pass the email as payload
     handleSubmit() {
       this.validateEmail(this.email);
       if (this.isValidEmail) {
@@ -51,7 +53,7 @@ export default {
         this.isValidEmail = false;
         this.errorMessage = 'Email address is required';        
         return;
-      } 
+      }
 
       // Check if userInput is a valid email address
       const emailRegex = /^[\w.-]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/;
