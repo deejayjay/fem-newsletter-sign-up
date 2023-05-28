@@ -4,7 +4,7 @@
     <section class="content">
       <div class="content__text">
         <h1 class="title">Thanks for subscribing!</h1>
-        <p>
+        <p class="content__message">
           A confirmation email has been sent to <strong class="strong">{{ email }}</strong>.
           Please open it and click the button inside to confirm your subscription.
         </p>
@@ -37,6 +37,7 @@ export default {
 .wrapper {
   padding: 4rem 2.4rem;
   height: 100%;
+  background-color: var(--color-white);
 }
 
 .content {
@@ -62,5 +63,23 @@ export default {
 
 .strong {
   font-weight: 700;
+}
+
+@media only screen and (width >= 1024px) {
+  .wrapper {
+    width: 100%;
+    max-width: 50.4rem;
+    height: initial;
+    border-radius: 3.6rem;
+    padding: 4.8rem 6.4rem 6.4rem;
+  }
+
+  .content {
+    padding-top: 10.4rem;
+  }
+
+  .content__message {
+    margin-bottom: 4rem;
+  }
 }
 </style>

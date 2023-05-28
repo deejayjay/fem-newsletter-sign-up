@@ -57,6 +57,7 @@ ol {
 
 :root {
   --color-primary: hsl(4, 100%, 67%);
+  --color-primary-15: hsl(4, 100%, 67%, 0.15);
   --color-dark-navy: hsl(234, 29%, 20%);
   --color-dark-navy-50: hsla(234, 29%, 20%, 0.5);
   --color-charcoal-grey: hsl(235, 18%, 26%);

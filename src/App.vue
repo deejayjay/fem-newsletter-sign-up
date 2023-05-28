@@ -51,6 +51,23 @@ export default {
 }
 
 .main {
-  flex: 1;
+  flex: 1;  
+}
+
+.attribution {
+  background-color: var(--color-white);
+  transition: background-color 0.3s ease-in-out;
+}
+
+@media only screen and (width >= 1024px) {
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .attribution {
+    background-color: var(--color-charcoal-grey);
+  }
 }
 </style>
