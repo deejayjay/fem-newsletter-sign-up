@@ -5,8 +5,8 @@
 <template>
   <div class="container">
     <main class="main">
-      <!-- <SignUpForm /> -->
-      <Confirmation />
+      <SignUpForm v-if="!showConfirmation" @submit="handleSubmit" />
+      <Confirmation v-else @dismiss="handleDismiss" :email="enteredEmail" />
     </main>
     <footer class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
@@ -24,6 +24,21 @@ export default {
   components: {
     SignUpForm,
     Confirmation
+  },
+  data() {
+    return {
+      showConfirmation: false,
+      enteredEmail: ''
+    };
+  },
+  methods: {
+    handleSubmit(enteredEmail) {
+      this.enteredEmail = enteredEmail;
+      this.showConfirmation = true;
+    },
+    handleDismiss() {
+      this.showConfirmation = false;
+    }
   }
 }
 </script>

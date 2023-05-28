@@ -5,15 +5,33 @@
       <div class="content__text">
         <h1 class="title">Thanks for subscribing!</h1>
         <p>
-          A confirmation email has been sent to <strong class="strong">ash@loremcompany.com</strong>.
+          A confirmation email has been sent to <strong class="strong">{{ email }}</strong>.
           Please open it and click the button inside to confirm your subscription.
         </p>
       </div>
-      <button type="button" class="btn">Dismiss message</button>
+      <button type="button" class="btn" @click="handleDismissClick">Dismiss message</button>
     </section>
   </div>
   <!-- Success message end -->
 </template>
+
+<script>
+export default {
+  name: 'Confirmation',
+  emits: ['dismiss'],
+  props: {
+    email: {
+      type: String,
+      required: true
+    }
+  },
+  methods: {
+    handleDismissClick() {
+      this.$emit('dismiss');
+    }
+  }
+}
+</script>
 
 <style scoped>
 .wrapper {

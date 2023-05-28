@@ -2,7 +2,7 @@
   <div class="banner">
   </div>
   <!-- Sign-up form start -->
-  <form class="form">
+  <form class="form" @submit.prevent="handleSubmit">
     <h1 class="title">Stay updated!</h1>
     <p>
       Join 60,000+ product managers receiving monthly updates on:
@@ -14,14 +14,29 @@
     </p>
     <div class="form__field">
       <label for="email" class="form__label">Email address</label>
-      <input type="email" class="form__control" name="email" id="email" placeholder="email@company.com">
+      <input type="email" class="form__control" name="email" id="email" placeholder="email@company.com" v-model="email">
     </div>
 
     <button type="submit" class="btn btn-submit">Subscribe to monthly newsletter</button>
   </form>
   <!-- Sign-up form end -->
 </template>
-<script></script>
+<script>
+export default {
+  name: 'SignUpForm',
+  emits: ['submit'],
+  data() {
+    return {
+      email: ''
+    };
+  },
+  methods: {
+    handleSubmit() {
+      this.$emit('submit', this.email);
+    }
+  }
+}
+</script>
 <style scoped>
 .banner {
   background: url('../assets/images/illustration-sign-up-mobile.svg') no-repeat center / cover;

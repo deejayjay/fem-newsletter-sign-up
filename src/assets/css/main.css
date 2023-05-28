@@ -28,6 +28,10 @@ body {
   padding: 1.6rem 2.4rem;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .title {
   font-size: 4rem;
   font-weight: 700;
