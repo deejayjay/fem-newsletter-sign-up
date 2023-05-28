@@ -16,7 +16,7 @@
       <div class="form__field">
         <div class="form__label-container">
           <label for="email" class="form__label">Email address</label>
-          <p class="error" v-if="!isValidEmail" id="email-error" role="alert">{{ errorMessage }}</p>
+          <p class="error" v-show="!isValidEmail" id="email-error" role="alert">{{ errorMessage }}</p>
         </div>
         <input type="email" class="form__control" :class="{invalid: !isValidEmail}" name="email" id="email" placeholder="email@company.com" v-model="email" aria-describedby="email-error">
       </div>
